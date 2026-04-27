@@ -56,7 +56,7 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-    # EC2에 접속하여 배포
+    # EC2에 접속하여 배포 
     - name: Deploy to EC2
       uses: appleboy/ssh-action@master
       with:
